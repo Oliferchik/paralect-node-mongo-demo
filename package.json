@@ -1,17 +1,32 @@
 {
-  "name": "mongodb-lecture-demo",
+  "name": "api",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Koa.js API",
+  "author": "Paralect",
+  "license": "MIT",
   "scripts": {
-    "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "ts-node --project tsconfig.json src/app.ts"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "@paralect/node-mongo": "^2.1.1",
-    "joi": "^17.4.1"
+    "@paralect/node-mongo": "3.1.2",
+    "npm": "9.6.1",
+    "ts-node": "10.9.1",
+    "zod": "3.21.4"
+  },
+  "devDependencies": {
+    "@types/node": "18.15.1",
+    "@typescript-eslint/eslint-plugin": "5.54.1",
+    "@typescript-eslint/parser": "5.54.1",
+    "eslint": "8.36.0",
+    "eslint-config-airbnb-base": "15.0.0",
+    "eslint-config-airbnb-typescript": "17.0.0",
+    "eslint-plugin-import": "2.27.5",
+    "lint-staged": "13.2.0",
+    "typescript": "4.9.5"
+  },
+  "lint-staged": {
+    "*.{js,ts}": [
+      "eslint --fix"
+    ]
   }
 }
